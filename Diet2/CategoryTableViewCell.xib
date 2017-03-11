@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="200" id="KGk-i7-Jjw" customClass="CategoryTableViewCell" customModule="Diet2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkx-FE-Oy5">
+                        <rect key="frame" x="4" y="5" width="312" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="mnh-Xl-lQP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5HF-pZ-Ufk">
+                        <rect key="frame" x="0.0" y="41" width="320" height="126"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-we-3cx" userLabel="imageLeft">
+                                <rect key="frame" x="0.0" y="0.0" width="107" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="CnX-Jf-B9Q"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xl2-sV-aAT" userLabel="ImageCenter">
+                                <rect key="frame" x="107" y="0.0" width="107" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="Lka-VF-VeM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vkn-am-zQh" userLabel="ImageRight">
+                                <rect key="frame" x="214" y="0.0" width="106" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="oAY-qZ-g3Q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="xl2-sV-aAT" firstAttribute="width" secondItem="1pm-we-3cx" secondAttribute="width" id="0ew-KA-Yim"/>
+                            <constraint firstItem="Vkn-am-zQh" firstAttribute="width" secondItem="1pm-we-3cx" secondAttribute="width" id="g3M-v2-6TG"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYl-Cv-EHd">
+                        <rect key="frame" x="0.0" y="167" width="320" height="30"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuC-27-tWB">
+                                <rect key="frame" x="0.0" y="0.0" width="107" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="サラダ">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLeftTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DCo-PX-lYl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLU-Ym-ahI">
+                                <rect key="frame" x="107" y="0.0" width="107" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="サラダ">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonCenterTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hlS-0h-i7U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hah-vc-n6F">
+                                <rect key="frame" x="214" y="0.0" width="106" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="サラダ">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonRightTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YTs-aS-SoK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="GJr-Lp-oi1"/>
+                            <constraint firstItem="hah-vc-n6F" firstAttribute="width" secondItem="GuC-27-tWB" secondAttribute="width" id="XFY-Hb-R4Z"/>
+                            <constraint firstItem="GLU-Ym-ahI" firstAttribute="width" secondItem="GuC-27-tWB" secondAttribute="width" id="yF7-ZZ-jvg"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5HF-pZ-Ufk" secondAttribute="bottom" constant="30" id="1EF-x7-mS6"/>
+                    <constraint firstAttribute="trailing" secondItem="5HF-pZ-Ufk" secondAttribute="trailing" id="7Uc-nR-uI9"/>
+                    <constraint firstAttribute="trailing" secondItem="KYl-Cv-EHd" secondAttribute="trailing" id="CKF-Cq-IJH"/>
+                    <constraint firstAttribute="bottom" secondItem="KYl-Cv-EHd" secondAttribute="bottom" id="CM0-K7-NvD"/>
+                    <constraint firstItem="5HF-pZ-Ufk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MFz-pV-wYW"/>
+                    <constraint firstAttribute="trailing" secondItem="5HF-pZ-Ufk" secondAttribute="trailing" id="OLs-TV-EI8"/>
+                    <constraint firstItem="5HF-pZ-Ufk" firstAttribute="top" secondItem="hkx-FE-Oy5" secondAttribute="bottom" constant="12" id="TQv-iw-KLq"/>
+                    <constraint firstAttribute="trailing" secondItem="hkx-FE-Oy5" secondAttribute="trailing" constant="4" id="TgA-BR-blL"/>
+                    <constraint firstItem="KYl-Cv-EHd" firstAttribute="top" secondItem="5HF-pZ-Ufk" secondAttribute="bottom" id="WHh-hX-H97"/>
+                    <constraint firstItem="KYl-Cv-EHd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eby-Bq-Djh"/>
+                    <constraint firstItem="5HF-pZ-Ufk" firstAttribute="top" secondItem="hkx-FE-Oy5" secondAttribute="bottom" constant="12" id="fr8-8B-BtV"/>
+                    <constraint firstItem="5HF-pZ-Ufk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iAh-8L-svy"/>
+                    <constraint firstItem="hkx-FE-Oy5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="ii9-Hv-D8k"/>
+                    <constraint firstItem="hkx-FE-Oy5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="t2G-IY-qg3"/>
+                    <constraint firstItem="5HF-pZ-Ufk" firstAttribute="top" secondItem="hkx-FE-Oy5" secondAttribute="bottom" constant="12" id="uMt-nz-KSb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buttonCenter" destination="GLU-Ym-ahI" id="00N-Re-KLt"/>
+                <outlet property="buttonLeft" destination="GuC-27-tWB" id="toX-tV-fPQ"/>
+                <outlet property="buttonRight" destination="hah-vc-n6F" id="vgD-iz-jf7"/>
+                <outlet property="headerLabel" destination="hkx-FE-Oy5" id="AIm-Re-5aR"/>
+                <outlet property="imageCenter" destination="xl2-sV-aAT" id="LST-ua-HA4"/>
+                <outlet property="imageLeft" destination="1pm-we-3cx" id="t99-Qi-TwI"/>
+                <outlet property="imageRight" destination="Vkn-am-zQh" id="DFN-71-vW5"/>
+            </connections>
+            <point key="canvasLocation" x="7" y="105"/>
+        </tableViewCell>
+    </objects>
+</document>
