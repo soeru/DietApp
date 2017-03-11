@@ -1,0 +1,10 @@
+{
+  "xcodeVersion" : "Xcode 8.2.1\nBuild version 8C1002",
+  "commitish" : "3.2.0",
+  "iOS" : [
+    {
+      "name" : "AlamofireImage",
+      "md5" : "afdabe5ca92080aa0714f41f0d67f8b8"
+    }
+  ]
+}
