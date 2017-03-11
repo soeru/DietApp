@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61153BE1E73B39B002939FB /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D65D961E739A1B004905A2 /* AlamofireImage.framework */; };
 		B66B334A1E70EF780083EE86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B33491E70EF780083EE86 /* AppDelegate.swift */; };
 		B66B334C1E70EF780083EE86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B334B1E70EF780083EE86 /* ViewController.swift */; };
 		B66B334F1E70EF780083EE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66B334D1E70EF780083EE86 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61153BE1E73B39B002939FB /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
