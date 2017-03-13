@@ -13,11 +13,8 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
 
   @IBOutlet weak var tableView: UITableView!
   
-  var items: [String] = [
-//    (name: "Salad_A", store: "FamilyMart", carbo: "10g", image: "salad"),
-//    (name: "Salad_B", store: "Lawson", carbo: "15g", image: "salad"),
-//    (name: "Salad_A", store: "Lawson", carbo: "20g", image: "salad")
-  ]
+  var items: [String] = []
+  var sortedItems: [String] = []
   
   var sendText: String = ""
   
@@ -38,7 +35,9 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         //改行区切りでデータを分割して配列に格納する。
         items = csvData.components(separatedBy: "\n")
-        
+        if items.last! == "" {
+          items.removeLast()
+        }
       } catch {
         print(error)
       }
@@ -53,15 +52,47 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     super.viewWillAppear(animated)
     navigationController?.setNavigationBarHidden(false, animated: true)
     categoryLabel.text = sendText
+    switch sendText {
+      case "パン":
+        for item in items {
+          if item.contains(sendText) || item.contains("サンドイッチ"){
+            sortedItems.append(item)
+          }
+      	}
+      case "おむすび・お寿司":
+        for item in items {
+          if item.contains("寿司") || item.contains("おむすび"){
+            sortedItems.append(item)
+          }
+      	}
+      case "ドリンク":
+        for item in items {
+          if item.contains("コーヒー・フラッペ"){
+            sortedItems.append(item)
+          }
+      }
+      case "麺・お弁当":
+        for item in items {
+          if item.contains("パスタ") || item.contains("うどん") || item.contains("お弁当"){
+            sortedItems.append(item)
+          }
+      	}
+    default:
+      for item in items {
+        if item.contains(sendText) {
+          sortedItems.append(item)
+        }
+      }
+    }
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return items.count
+    return sortedItems.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: ProductTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
-    let itemsDetail = items[indexPath.row].components(separatedBy: ",")
+    let itemsDetail = sortedItems[indexPath.row].components(separatedBy: ",")
     cell.titleLabel.text = itemsDetail[0]
     cell.storeLabel.text = itemsDetail[1]
     cell.carboLabel.text = "糖質 \(itemsDetail[2])g"
@@ -71,16 +102,5 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
   }
   
   @IBOutlet weak var categoryLabel: UILabel!
-  
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

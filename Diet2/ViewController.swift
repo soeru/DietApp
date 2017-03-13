@@ -14,10 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   let category: [(header: String, imageLeft: String, imageCenter: String, imageRight: String, categoryLeft: String, categoryCenter: String, categoryRight: String)] = [
     (header: "ヘルシー", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "サラダ", categoryCenter: "スープ", categoryRight: "おでん"),
-    (header: "ガッツリ", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "おにぎり", categoryCenter: "パン", categoryRight: "弁当"),
-    (header: "スイーツ", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "お菓子", categoryCenter: "デザート", categoryRight: "ドリンク"),
-     (header: "スイーツ", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "お菓子", categoryCenter: "デザート", categoryRight: "ドリンク"),
-      (header: "スイーツ", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "お菓子", categoryCenter: "デザート", categoryRight: "ドリンク")
+    (header: "ガッツリ", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "おむすび・お寿司", categoryCenter: "パン", categoryRight: "麺・お弁当"),
+    (header: "おやつ", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "菓子", categoryCenter: "ホットスナック", categoryRight: "ドリンク")
   ]
   
   override func viewDidLoad() {
@@ -72,15 +70,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     return cell
   }
   
-//  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    performSegue(withIdentifier: "toProductViewController", sender: nil)
-//  }
-  
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    if segue.identifier == "toProductViewController" {
-//      let productViewController: ProductViewController = segue.destination as! ProductViewController
-//      productViewController.sendText = self.category[0].header
-//    }
-//  }
 }
 

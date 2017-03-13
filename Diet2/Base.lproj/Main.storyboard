@@ -30,14 +30,18 @@
                                         <rect key="frame" x="0.0" y="1" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tdc-pC-TMF" id="6PW-gr-osO">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="r8I-EP-jnq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4bR-1L-pyd"/>
+                                </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7fS-yI-HZ5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9pr-Ya-fhZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7fS-yI-HZ5" secondAttribute="bottom" id="M7W-RX-8qj"/>
@@ -47,6 +51,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bvf-3r-g6y"/>
                     <connections>
+                        <outlet property="tableView" destination="7fS-yI-HZ5" id="HP7-g3-GBy"/>
                         <segue destination="zS7-Cn-pqS" kind="show" identifier="toProductViewController" id="xsM-g1-pFh"/>
                     </connections>
                 </viewController>
@@ -83,7 +88,7 @@
                                         <rect key="frame" x="0.0" y="1" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r2M-P0-6aw" id="faf-4T-eIU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
