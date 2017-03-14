@@ -14,8 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   let category: [(header: String, imageLeft: String, imageCenter: String, imageRight: String, categoryLeft: String, categoryCenter: String, categoryRight: String)] = [
     (header: "ヘルシー", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "サラダ", categoryCenter: "スープ", categoryRight: "おでん"),
-    (header: "ガッツリ", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "おむすび・お寿司", categoryCenter: "パン", categoryRight: "麺・お弁当"),
-    (header: "おやつ", imageLeft: "salad", imageCenter: "soup", imageRight: "oden", categoryLeft: "菓子", categoryCenter: "ホットスナック", categoryRight: "ドリンク")
+    (header: "ガッツリ", imageLeft: "onigiri", imageCenter: "bread", imageRight: "bento", categoryLeft: "おむすび・お寿司", categoryCenter: "パン", categoryRight: "麺・お弁当"),
+    (header: "おやつ", imageLeft: "okashi", imageCenter: "hotsnack", imageRight: "drink", categoryLeft: "菓子", categoryCenter: "ホットスナック", categoryRight: "ドリンク")
   ]
   
   override func viewDidLoad() {
