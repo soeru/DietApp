@@ -27,30 +27,41 @@
                             <constraint firstAttribute="width" secondItem="SJE-Jp-PHl" secondAttribute="height" multiplier="1:1" id="ygQ-41-Jcn"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コンビニ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0l-51-pK4">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Familymart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0l-51-pK4">
                         <rect key="frame" x="103" y="33" width="201" height="21"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="UTw-DE-hF8"/>
                             <constraint firstAttribute="height" constant="21" id="tW5-bD-Qjs"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="糖質" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xC-Y0-P22">
-                        <rect key="frame" x="103" y="62.5" width="209" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="糖質100,0g" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xC-Y0-P22">
+                        <rect key="frame" x="103" y="62" width="82" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="Ztn-e2-uJe"/>
+                            <constraint firstAttribute="height" constant="21" id="LFI-aS-AAS"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dE6-OZ-7Mt">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dE6-OZ-7Mt">
                         <rect key="frame" x="103" y="8" width="213" height="21"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="eQw-Sg-cA0"/>
                             <constraint firstAttribute="height" constant="21" id="heo-vB-RWi"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タンパク質100.0g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoS-qX-OqR">
+                        <rect key="frame" x="189" y="62" width="131" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="vnz-Vj-e9I"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -58,22 +69,25 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="dE6-OZ-7Mt" secondAttribute="trailing" constant="4" id="0eX-xD-hAo" userLabel="trailing = Title Label.trailing + 8"/>
                     <constraint firstItem="SJE-Jp-PHl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Abe-as-cu1"/>
-                    <constraint firstItem="0xC-Y0-P22" firstAttribute="top" secondItem="p0l-51-pK4" secondAttribute="bottom" constant="8" id="HUV-ed-l13"/>
+                    <constraint firstItem="0xC-Y0-P22" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="CKg-Ml-qy2"/>
                     <constraint firstItem="p0l-51-pK4" firstAttribute="top" secondItem="dE6-OZ-7Mt" secondAttribute="bottom" constant="4" id="JnE-bQ-k3r" userLabel="コンビニ名.top = Title Label.bottom + 8"/>
-                    <constraint firstItem="p0l-51-pK4" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="N6P-JI-lPu"/>
-                    <constraint firstAttribute="trailing" secondItem="0xC-Y0-P22" secondAttribute="trailing" constant="8" id="T3d-Dx-Awb"/>
-                    <constraint firstItem="dE6-OZ-7Mt" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="aOx-VE-v1o"/>
+                    <constraint firstItem="p0l-51-pK4" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="LBj-O2-Wrx"/>
+                    <constraint firstItem="0xC-Y0-P22" firstAttribute="top" secondItem="p0l-51-pK4" secondAttribute="bottom" constant="8" id="RoU-ee-SXf"/>
                     <constraint firstAttribute="trailingMargin" secondItem="p0l-51-pK4" secondAttribute="trailing" constant="8" id="ctM-ka-yLj"/>
+                    <constraint firstItem="YoS-qX-OqR" firstAttribute="leading" secondItem="0xC-Y0-P22" secondAttribute="trailing" constant="4" id="dir-EG-dXt"/>
+                    <constraint firstAttribute="trailing" secondItem="YoS-qX-OqR" secondAttribute="trailing" id="j6t-Ya-l3T"/>
                     <constraint firstItem="SJE-Jp-PHl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="kJi-fQ-hch"/>
+                    <constraint firstItem="0xC-Y0-P22" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="nNI-1X-hei"/>
                     <constraint firstAttribute="bottom" secondItem="SJE-Jp-PHl" secondAttribute="bottom" constant="4" id="oKf-jO-QEz"/>
-                    <constraint firstItem="0xC-Y0-P22" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="snw-7k-H53"/>
-                    <constraint firstItem="0xC-Y0-P22" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="wab-x0-KEl"/>
+                    <constraint firstItem="YoS-qX-OqR" firstAttribute="top" secondItem="p0l-51-pK4" secondAttribute="bottom" constant="8" id="ogp-Gr-WjR"/>
                     <constraint firstItem="dE6-OZ-7Mt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="y2h-3W-MDw"/>
+                    <constraint firstItem="dE6-OZ-7Mt" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="znk-CF-Csn"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="carboLabel" destination="0xC-Y0-P22" id="hn4-Fy-ftB"/>
                 <outlet property="productImage" destination="SJE-Jp-PHl" id="AUl-27-mSA"/>
+                <outlet property="proteinLabel" destination="YoS-qX-OqR" id="EON-ZA-TXP"/>
                 <outlet property="storeLabel" destination="p0l-51-pK4" id="qSM-QI-vBv"/>
                 <outlet property="titleLabel" destination="dE6-OZ-7Mt" id="qv0-4b-5B5"/>
             </connections>

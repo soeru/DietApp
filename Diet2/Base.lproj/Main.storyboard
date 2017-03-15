@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="37.331334332833585"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--糖質量-->
         <scene sceneID="iAd-fC-3f4">
             <objects>
-                <viewController storyboardIdentifier="settingView" title="Setting View Controller" id="qbV-5l-LMz" customClass="SettingViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingView" title="糖質量" id="qbV-5l-LMz" customClass="SettingViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ypk-wF-aQI"/>
                         <viewControllerLayoutGuide type="bottom" id="pbk-jn-2Jx"/>

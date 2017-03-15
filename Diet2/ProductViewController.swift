@@ -30,13 +30,15 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     var carbo: Double
     var image_url: String
     var category: String
+    var protein: Double
     
-    init(record: (String, String, Double, String, String)) {
+    init(record: (String, String, Double, String, String, Double)) {
       self.title = record.0
       self.store = record.1
       self.carbo = record.2
       self.image_url = record.3
       self.category = record.4
+      self.protein = record.5
     }
     
   }
@@ -66,7 +68,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
       }
       for stringItem in stringItems {
         items = stringItem.components(separatedBy: ",")
-        itemsByObject.append(ItemsByObject(record: (items[0], items[1], Double(items[2])!, items[3], items[4])))
+        itemsByObject.append(ItemsByObject(record: (items[0], items[1], Double(items[2])!, items[3], items[4], Double(items[5])!)))
       }
       
       let setting = UserDefaults.standard
@@ -112,6 +114,12 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             itemsSortedByCategory.append(item)
           }
       	}
+      case "スープ":
+        for item in itemsFilteredByCarbo  {
+          if item.title.contains("スープ"){
+            itemsSortedByCategory.append(item)
+          }
+      }
     default:
       for item in itemsFilteredByCarbo  {
         if item.category.contains(sendText) {
@@ -133,6 +141,8 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     cell.carboLabel.text = "糖質 \(itemsDetail.carbo)g"
     let image_url: URL = URL(string: itemsDetail.image_url)!
     cell.productImage.af_setImage(withURL: image_url)
+    cell.proteinLabel.text = "タンパク質 \(itemsDetail.protein)g"
+    cell.selectionStyle = UITableViewCellSelectionStyle.none
     return cell
   }
   

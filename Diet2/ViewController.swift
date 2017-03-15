@@ -67,6 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       productView.sendText = self.category[indexPath.row].categoryRight
       self.navigationController?.pushViewController(productView, animated: true)
     }
+    cell.selectionStyle = UITableViewCellSelectionStyle.none
     return cell
   }
   

@@ -25,4 +25,5 @@ class ProductTableViewCell: UITableViewCell {
   @IBOutlet weak var productImage: UIImageView!
   @IBOutlet weak var storeLabel: UILabel!
   @IBOutlet weak var carboLabel: UILabel!
+  @IBOutlet weak var proteinLabel: UILabel!
 }
