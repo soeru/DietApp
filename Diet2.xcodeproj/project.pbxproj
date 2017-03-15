@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B631A6FA1E79069F00FF3134 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631A6F91E79069F00FF3134 /* SettingViewController.swift */; };
 		B66B334A1E70EF780083EE86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B33491E70EF780083EE86 /* AppDelegate.swift */; };
 		B66B334C1E70EF780083EE86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B334B1E70EF780083EE86 /* ViewController.swift */; };
 		B66B334F1E70EF780083EE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66B334D1E70EF780083EE86 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B631A6F91E79069F00FF3134 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B66B33461E70EF780083EE86 /* Diet2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diet2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66B33491E70EF780083EE86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B66B334B1E70EF780083EE86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,10 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				B66B33491E70EF780083EE86 /* AppDelegate.swift */,
+				B66B334D1E70EF780083EE86 /* Main.storyboard */,
 				B66B334B1E70EF780083EE86 /* ViewController.swift */,
 				B66B33611E7134C90083EE86 /* ProductViewController.swift */,
-				B66B336D1E728DA10083EE86 /* fm.csv */,
-				B66B334D1E70EF780083EE86 /* Main.storyboard */,
+				B631A6F91E79069F00FF3134 /* SettingViewController.swift */,
 				B66B33691E717BEE0083EE86 /* ProductTableViewCell.swift */,
 				B66B336A1E717BEE0083EE86 /* ProductTableViewCell.xib */,
 				B66B335B1E70EFD60083EE86 /* CategoryTableViewCell.swift */,
@@ -102,6 +104,7 @@
 				B66B33501E70EF780083EE86 /* Assets.xcassets */,
 				B66B33521E70EF780083EE86 /* LaunchScreen.storyboard */,
 				B66B33551E70EF780083EE86 /* Info.plist */,
+				B66B336D1E728DA10083EE86 /* fm.csv */,
 			);
 			path = Diet2;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				B66B336B1E717BEE0083EE86 /* ProductTableViewCell.swift in Sources */,
 				B66B33621E7134C90083EE86 /* ProductViewController.swift in Sources */,
 				B66B335D1E70EFD60083EE86 /* CategoryTableViewCell.swift in Sources */,
+				B631A6FA1E79069F00FF3134 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

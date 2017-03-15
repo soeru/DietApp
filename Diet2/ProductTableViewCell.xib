@@ -58,13 +58,12 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="dE6-OZ-7Mt" secondAttribute="trailing" constant="4" id="0eX-xD-hAo" userLabel="trailing = Title Label.trailing + 8"/>
                     <constraint firstItem="SJE-Jp-PHl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Abe-as-cu1"/>
+                    <constraint firstItem="0xC-Y0-P22" firstAttribute="top" secondItem="p0l-51-pK4" secondAttribute="bottom" constant="8" id="HUV-ed-l13"/>
                     <constraint firstItem="p0l-51-pK4" firstAttribute="top" secondItem="dE6-OZ-7Mt" secondAttribute="bottom" constant="4" id="JnE-bQ-k3r" userLabel="コンビニ名.top = Title Label.bottom + 8"/>
                     <constraint firstItem="p0l-51-pK4" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="N6P-JI-lPu"/>
                     <constraint firstAttribute="trailing" secondItem="0xC-Y0-P22" secondAttribute="trailing" constant="8" id="T3d-Dx-Awb"/>
-                    <constraint firstItem="0xC-Y0-P22" firstAttribute="top" secondItem="p0l-51-pK4" secondAttribute="bottom" constant="8" id="U2h-bJ-yWu"/>
                     <constraint firstItem="dE6-OZ-7Mt" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="aOx-VE-v1o"/>
                     <constraint firstAttribute="trailingMargin" secondItem="p0l-51-pK4" secondAttribute="trailing" constant="8" id="ctM-ka-yLj"/>
-                    <constraint firstItem="0xC-Y0-P22" firstAttribute="top" secondItem="p0l-51-pK4" secondAttribute="bottom" constant="8" id="eHU-sd-zk2"/>
                     <constraint firstItem="SJE-Jp-PHl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="kJi-fQ-hch"/>
                     <constraint firstAttribute="bottom" secondItem="SJE-Jp-PHl" secondAttribute="bottom" constant="4" id="oKf-jO-QEz"/>
                     <constraint firstItem="0xC-Y0-P22" firstAttribute="leading" secondItem="SJE-Jp-PHl" secondAttribute="trailing" constant="8" id="snw-7k-H53"/>

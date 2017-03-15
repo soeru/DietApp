@@ -12,6 +12,7 @@ import AlamofireImage
 class ProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var carboIntakeLabel: UILabel!
   
   var stringItems: [String] = []
   var items: [String] = []
@@ -19,7 +20,9 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
   var itemsByObject: [ItemsByObject] = []
   var itemsFilteredByCarbo : [ItemsByObject] = []
   var sendText: String = ""
-  var carboIntake: Double = 30
+  var carboIntake: Double = 150.0
+  
+  let settingKey = "carbo_value"
   
   class ItemsByObject {
     var title: String
@@ -65,6 +68,12 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         items = stringItem.components(separatedBy: ",")
         itemsByObject.append(ItemsByObject(record: (items[0], items[1], Double(items[2])!, items[3], items[4])))
       }
+      
+      let setting = UserDefaults.standard
+      if setting.object(forKey: settingKey) != nil {
+        carboIntake = Double(setting.integer(forKey: settingKey))
+      }
+      
       itemsFilteredByCarbo  = itemsByObject.filter( { $0.carbo < carboIntake } )
     }
 
@@ -75,8 +84,9 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.setNavigationBarHidden(false, animated: true)
+//    navigationController?.setNavigationBarHidden(false, animated: true)
     categoryLabel.text = sendText
+    carboIntakeLabel.text = "糖質\(Int(carboIntake))g未満"
     switch sendText {
       case "パン":
         for item in itemsFilteredByCarbo  {

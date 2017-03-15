@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.setNavigationBarHidden(true, animated: true)
+//    navigationController?.setNavigationBarHidden(true, animated: true)
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,5 +70,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     return cell
   }
   
+
+  @IBAction func settingTapped(_ sender: Any) {
+    let settingViewController = SettingViewController()
+    self.navigationController?.pushViewController(settingViewController, animated: true)}
 }
 
