@@ -21,7 +21,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
   var itemsFilteredByCarbo : [ItemsByObject] = []
   var sendText: String = ""
   var carboIntake: Double = 150.0
-  
+  var alert:UIAlertController!
   let settingKey = "carbo_value"
   
   class ItemsByObject {
@@ -77,6 +77,17 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
       }
       
       itemsFilteredByCarbo  = itemsByObject.filter( { $0.carbo < carboIntake } )
+      
+      alert = UIAlertController(title: "食事記録", message: "記録してもいいですか？", preferredStyle: UIAlertControllerStyle.alert)
+      let recordAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+//        didSelectRowAtで受け取ったデータを保存
+//        setting.setValue(<#T##value: Any?##Any?#>, forKey: <#T##String#>)
+//        setting.synchronize()
+      })
+      let cancelAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler: nil)
+      alert.addAction(recordAction)
+      alert.addAction(cancelAction)
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -144,6 +155,11 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     cell.proteinLabel.text = "タンパク質 \(itemsDetail.protein)g"
     cell.selectionStyle = UITableViewCellSelectionStyle.none
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.present(alert, animated: true, completion: nil)
+//    変数に選択したセルの糖質およびタンパク質、ならびに日付を格納
   }
   
   @IBOutlet weak var categoryLabel: UILabel!
