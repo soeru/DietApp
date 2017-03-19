@@ -34,7 +34,6 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
   var sendText: String = ""
   var carboIntake: Double = 150.0
   var alert:UIAlertController!
-//  var intakeRecord = IntakeRecord()
   let settingKey = "carbo_value"
   
   class ItemsByObject {
