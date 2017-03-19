@@ -8,6 +8,18 @@
 
 import UIKit
 import AlamofireImage
+import RealmSwift
+
+class IntakeRecord: Object{
+  dynamic var id: String = ""
+  dynamic var recordDate: String = ""
+  dynamic var carboIntake: Double = 0.0
+  dynamic var proteinIntake: Double = 0.0
+  
+  override static func primaryKey() -> String? {
+    return "id"
+  }
+}
 
 class ProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -22,6 +34,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
   var sendText: String = ""
   var carboIntake: Double = 150.0
   var alert:UIAlertController!
+//  var intakeRecord = IntakeRecord()
   let settingKey = "carbo_value"
   
   class ItemsByObject {
@@ -78,18 +91,8 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
       
       itemsFilteredByCarbo  = itemsByObject.filter( { $0.carbo < carboIntake } )
       
-      alert = UIAlertController(title: "食事記録", message: "記録してもいいですか？", preferredStyle: UIAlertControllerStyle.alert)
-      let recordAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
-//        didSelectRowAtで受け取ったデータを保存
-//        setting.setValue(<#T##value: Any?##Any?#>, forKey: <#T##String#>)
-//        setting.synchronize()
-      })
-      let cancelAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler: nil)
-      alert.addAction(recordAction)
-      alert.addAction(cancelAction)
-      
     }
-
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -158,8 +161,36 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    alert = UIAlertController(title: "食事記録", message: "記録してもいいですか？", preferredStyle: UIAlertControllerStyle.alert)
+    let recordAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+      let itemsDetail = self.itemsSortedByCategory[indexPath.row]
+      
+//      let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+//      Realm.Configuration.defaultConfiguration = config
+      
+      let df = DateFormatter()
+      df.locale = Locale(identifier: "ja_JP")
+      df.dateFormat = "yyyy-MM-dd"
+      let now = Date()
+      
+      let intakeRecord = IntakeRecord()
+      intakeRecord.id = NSUUID().uuidString
+      intakeRecord.recordDate = df.string(from: now)
+      intakeRecord.carboIntake = itemsDetail.carbo
+      intakeRecord.proteinIntake = itemsDetail.protein
+      
+      let realm = try! Realm()
+      try! realm.write {
+        realm.add(intakeRecord, update: true)
+      }
+//      let result = realm.objects(IntakeRecord.self)
+//      print(result)
+//      print(intakeRecord)
+    })
+    let cancelAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler: nil)
+    alert.addAction(recordAction)
+    alert.addAction(cancelAction)
     self.present(alert, animated: true, completion: nil)
-//    変数に選択したセルの糖質およびタンパク質、ならびに日付を格納
   }
   
   @IBOutlet weak var categoryLabel: UILabel!
