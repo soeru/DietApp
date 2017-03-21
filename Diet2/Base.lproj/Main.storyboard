@@ -87,19 +87,26 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qg6-sP-KgB" id="Ux1-xt-h4z"/>
+                                    <outlet property="delegate" destination="qg6-sP-KgB" id="WUG-Fb-Jdg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="s10-4t-aeZ" id="d8K-3O-ZNd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhv-w8-UbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1696.8" y="759.67016491754134"/>
         </scene>
-        <!--糖質量上限-->
+        <!--糖質量上限(g)-->
         <scene sceneID="iAd-fC-3f4">
             <objects>
-                <viewController storyboardIdentifier="settingView" title="糖質量上限" id="qbV-5l-LMz" customClass="SettingViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingView" title="糖質量上限(g)" id="qbV-5l-LMz" customClass="SettingViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ypk-wF-aQI"/>
                         <viewControllerLayoutGuide type="bottom" id="pbk-jn-2Jx"/>

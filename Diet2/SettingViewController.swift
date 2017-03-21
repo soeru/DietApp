@@ -11,7 +11,7 @@ import UIKit
 class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
   @IBOutlet weak var pickerView: UIPickerView!
-  let settingKey = "carbo_value"
+  let settingKey = "carboLimit"
   
   let settingArray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
   
@@ -31,7 +31,7 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
           }
         }
       } else {
-        setting.register(defaults: [settingKey : 150])
+        setting.register(defaults: [settingKey : 100])
       }
     }
 
