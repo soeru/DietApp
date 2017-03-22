@@ -22,9 +22,6 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
     tableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
     tableView.estimatedRowHeight = 100
     tableView.rowHeight = UITableViewAutomaticDimension
-    
-    let realm = try! Realm()
-    intakeRecord = Array(realm.objects(IntakeRecord.self))
   }
 
   override func didReceiveMemoryWarning() {
@@ -32,6 +29,14 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // Dispose of any resources that can be recreated.
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: true)
+    let realm = try! Realm()
+    intakeRecord = Array(realm.objects(IntakeRecord.self))
+    tableView.reloadData()
+  }
+    
   func sectionDate(_ section: Int) -> Date {
     let now = Date()
     let duration = -60*60*24*section
@@ -47,8 +52,15 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    var sumCarbo: Double = 0.0
+    var sumProtein: Double = 0.0
     let df = jpDailyDateFormat()
-    return df.string(from: sectionDate(section))
+    let intakeRecordFiltered = intakeRecord.filter( { $0.recordDate == df.string(from: sectionDate(section))} )
+    for item in intakeRecordFiltered {
+      sumCarbo += item.product!.carbo
+      sumProtein += item.product!.protein
+    }
+    return df.string(from: sectionDate(section)) + "   糖質:\(Int(sumCarbo))g  タンパク質:\(Int(sumProtein))g"
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {
