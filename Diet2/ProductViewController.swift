@@ -107,7 +107,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-//    navigationController?.setNavigationBarHidden(false, animated: true)
+    navigationController?.setNavigationBarHidden(false, animated: true)
     categoryLabel.text = sendText
     carboIntakeLabel.text = "糖質\(Int(carboIntakeLimit))g未満"
     switch sendText {

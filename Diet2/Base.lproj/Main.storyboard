@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--食事-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="7fS-yI-HZ5">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="tdc-pC-TMF">
@@ -49,19 +49,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="7fS-yI-HZ5" secondAttribute="trailing" id="ds0-4U-lwM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bvf-3r-g6y">
-                        <barButtonItem key="leftBarButtonItem" title="記録" id="87G-a9-Vf9">
-                            <connections>
-                                <segue destination="qg6-sP-KgB" kind="show" id="bSW-PG-axg"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="設定" id="jng-QB-lgO">
-                            <connections>
-                                <action selector="settingTapped:" destination="BYZ-38-t0r" id="4Fk-7s-Z0V"/>
-                                <segue destination="qbV-5l-LMz" kind="show" id="CwB-9Y-oHj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="食事" image="ForknKnife" id="yea-Ed-ggz"/>
+                    <navigationItem key="navigationItem" id="bvf-3r-g6y"/>
                     <connections>
                         <outlet property="tableView" destination="7fS-yI-HZ5" id="HP7-g3-GBy"/>
                         <segue destination="zS7-Cn-pqS" kind="show" identifier="toProductViewController" id="xsM-g1-pFh"/>
@@ -69,9 +58,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1911.2" y="37.331334332833585"/>
         </scene>
-        <!--Record View Controller-->
+        <!--記録-->
         <scene sceneID="Y71-wh-KoS">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="qg6-sP-KgB" customClass="RecordViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,6 +84,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="記録" image="Record" id="RoY-gi-iwZ"/>
                     <connections>
                         <outlet property="tableView" destination="s10-4t-aeZ" id="d8K-3O-ZNd"/>
                     </connections>
@@ -126,6 +116,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="設定" image="Setting" id="n9l-09-kpU"/>
                     <connections>
                         <outlet property="pickerView" destination="2RO-7A-kTS" id="1b7-kr-M5l"/>
                     </connections>
@@ -203,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZH-I8-OFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1696.8" y="35.532233883058474"/>
+            <point key="canvasLocation" x="2636" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jk4-us-Cwg">
@@ -217,12 +208,37 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="c4Y-n2-oBD"/>
+                        <segue destination="YEw-hU-Ly5" kind="relationship" relationship="rootViewController" id="c4Y-n2-oBD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lMa-J7-XWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="270" y="37"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6Hm-tG-rio">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YEw-hU-Ly5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gJc-jL-jua"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qkg-ZR-4xq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Zd2-Vk-xRh"/>
+                        <segue destination="qg6-sP-KgB" kind="relationship" relationship="viewControllers" id="gbc-wU-BI9"/>
+                        <segue destination="qbV-5l-LMz" kind="relationship" relationship="viewControllers" id="mkZ-CK-zf9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ig5-wH-7M7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ForknKnife" width="30" height="30"/>
+        <image name="Record" width="30" height="30"/>
+        <image name="Setting" width="30" height="30"/>
+    </resources>
 </document>
