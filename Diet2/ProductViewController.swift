@@ -95,9 +95,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
       if setting.object(forKey: settingKey) != nil {
         carboIntakeLimit = setting.double(forKey: settingKey)
       }
-      
-      let realm = try! Realm()
-      itemsFilteredByCarboLimit  = realm.objects(Product.self).filter( { $0.carbo < carboIntakeLimit } )
+			
     }
   
     override func didReceiveMemoryWarning() {
@@ -108,8 +106,16 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.setNavigationBarHidden(false, animated: true)
+		
     categoryLabel.text = sendText
-    carboIntakeLabel.text = "糖質\(Int(carboIntakeLimit))g未満"
+		
+		let realm = try! Realm()
+		let now = Date()
+		let df = jpDailyDateFormat()
+		carboIntakeLimit -= Array(realm.objects(IntakeRecord.self)).filter( { $0.recordDate == df.string(from: now) } ).reduce(0.0, { $0 + $1.product!.carbo})
+		carboIntakeLabel.text = "糖質\(Int(floor(carboIntakeLimit)))g未満"
+		itemsFilteredByCarboLimit  = realm.objects(Product.self).filter( { $0.carbo < carboIntakeLimit } )
+		
     switch sendText {
       case "パン":
         for item in itemsFilteredByCarboLimit  {
@@ -174,11 +180,9 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
 //      let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
 //      Realm.Configuration.defaultConfiguration = config
       
-      let df = DateFormatter()
-      df.locale = Locale(identifier: "ja_JP")
-      df.dateFormat = "yyyy-MM-dd"
+      let df = self.jpDailyDateFormat()
       let now = Date()
-      
+			
       let intakeRecord = IntakeRecord()
       intakeRecord.id = NSUUID().uuidString
       intakeRecord.recordDate = df.string(from: now)
@@ -198,4 +202,10 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     self.present(alert, animated: true, completion: nil)
   }
 
+	func jpDailyDateFormat() -> DateFormatter {
+		let df = DateFormatter()
+		df.locale = Locale(identifier: "ja_JP")
+		df.dateFormat = "yyyy-MM-dd"
+		return df
+	}
 }
