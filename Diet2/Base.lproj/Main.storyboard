@@ -13,7 +13,7 @@
         <!--食事-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="食事" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -50,7 +50,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="食事" image="ForknKnife" id="yea-Ed-ggz"/>
-                    <navigationItem key="navigationItem" id="bvf-3r-g6y"/>
+                    <navigationItem key="navigationItem" title="ごはんをさがす" id="bvf-3r-g6y"/>
                     <connections>
                         <outlet property="tableView" destination="7fS-yI-HZ5" id="HP7-g3-GBy"/>
                         <segue destination="zS7-Cn-pqS" kind="show" identifier="toProductViewController" id="xsM-g1-pFh"/>
@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="1696" y="-625"/>
         </scene>
-        <!--Product View Controller-->
+        <!--ごはんをさがす-->
         <scene sceneID="XTq-eO-vEW">
             <objects>
                 <viewController storyboardIdentifier="productView" id="zS7-Cn-pqS" customClass="ProductViewController" customModule="Diet2" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,7 +201,7 @@
                             <constraint firstAttribute="trailing" secondItem="QnQ-wv-tMJ" secondAttribute="trailing" constant="4" id="zEz-86-jWJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="s8P-tF-KJD"/>
+                    <navigationItem key="navigationItem" title="ごはんをさがす" id="s8P-tF-KJD"/>
                     <connections>
                         <outlet property="carboIntakeLabel" destination="QnQ-wv-tMJ" id="SBf-Zt-wY5"/>
                         <outlet property="categoryLabel" destination="nMA-Hb-Nov" id="Xus-vN-GMH"/>
@@ -217,10 +217,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zbm-qw-uNL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I9w-0T-5S5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="I9w-0T-5S5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

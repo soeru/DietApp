@@ -13,7 +13,7 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
   @IBOutlet weak var pickerView: UIPickerView!
   let settingKey = "carboLimit"
   
-  let settingArray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  let settingArray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200]
   
     override func viewDidLoad() {
         super.viewDidLoad()

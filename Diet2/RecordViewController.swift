@@ -87,4 +87,22 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
     cell.selectionStyle = UITableViewCellSelectionStyle.none
     return cell
   }
+	
+	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return true
+	}
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == UITableViewCellEditingStyle.delete {
+			let df = jpDailyDateFormat()
+			let intakeRecordFilteredByDate = intakeRecord.filter( { $0.recordDate == df.string(from: sectionDate(indexPath.section))} )
+			let deleteRecord = intakeRecordFilteredByDate[indexPath.row]
+			intakeRecord.remove(at: intakeRecord.index(of: deleteRecord)!)
+			self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.left)
+			let realm = try! Realm()
+			try! realm.write {
+				realm.delete(deleteRecord)
+			}
+		}
+	}
 }

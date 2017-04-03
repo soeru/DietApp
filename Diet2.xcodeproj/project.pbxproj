@@ -12,6 +12,7 @@
 		B631A6FD1E7CEBB500FF3134 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B631A6FB1E7CEBB500FF3134 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B631A7001E7CEC5800FF3134 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B631A6FF1E7CEC5800FF3134 /* Realm.framework */; };
 		B631A7011E7CEC5800FF3134 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B631A6FF1E7CEC5800FF3134 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B65BF0521E8748250086E3C7 /* CSVLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65BF0511E8748250086E3C7 /* CSVLoader.swift */; };
 		B66B334A1E70EF780083EE86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B33491E70EF780083EE86 /* AppDelegate.swift */; };
 		B66B334C1E70EF780083EE86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B334B1E70EF780083EE86 /* ViewController.swift */; };
 		B66B334F1E70EF780083EE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66B334D1E70EF780083EE86 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		B631A6F91E79069F00FF3134 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B631A6FB1E7CEBB500FF3134 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		B631A6FF1E7CEC5800FF3134 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		B65BF0511E8748250086E3C7 /* CSVLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVLoader.swift; sourceTree = "<group>"; };
 		B66B33461E70EF780083EE86 /* Diet2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diet2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66B33491E70EF780083EE86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B66B334B1E70EF780083EE86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				B66B33491E70EF780083EE86 /* AppDelegate.swift */,
+				B65BF0511E8748250086E3C7 /* CSVLoader.swift */,
 				B66B334D1E70EF780083EE86 /* Main.storyboard */,
 				B66B334B1E70EF780083EE86 /* ViewController.swift */,
 				B66B335B1E70EFD60083EE86 /* CategoryTableViewCell.swift */,
@@ -250,6 +253,7 @@
 				B66B336B1E717BEE0083EE86 /* ProductTableViewCell.swift in Sources */,
 				B69159F51E7E388600F38355 /* RecordViewController.swift in Sources */,
 				B66B33621E7134C90083EE86 /* ProductViewController.swift in Sources */,
+				B65BF0521E8748250086E3C7 /* CSVLoader.swift in Sources */,
 				B66B335D1E70EFD60083EE86 /* CategoryTableViewCell.swift in Sources */,
 				B631A6FA1E79069F00FF3134 /* SettingViewController.swift in Sources */,
 			);

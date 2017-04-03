@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkx-FE-Oy5">
-                        <rect key="frame" x="4" y="4" width="312" height="24"/>
+                        <rect key="frame" x="4" y="11" width="312" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="mnh-Xl-lQP"/>
                         </constraints>
@@ -28,7 +28,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5HF-pZ-Ufk">
-                        <rect key="frame" x="0.0" y="40" width="320" height="106.5"/>
+                        <rect key="frame" x="0.0" y="46" width="320" height="106.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-we-3cx" userLabel="imageLeft">
                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="106.5"/>
@@ -56,7 +56,7 @@
                         </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYl-Cv-EHd">
-                        <rect key="frame" x="0.0" y="146.5" width="320" height="25"/>
+                        <rect key="frame" x="0.0" y="152.5" width="320" height="25"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuC-27-tWB">
                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="25"/>
@@ -102,15 +102,13 @@
                     <constraint firstAttribute="trailing" secondItem="KYl-Cv-EHd" secondAttribute="trailing" id="CKF-Cq-IJH"/>
                     <constraint firstItem="5HF-pZ-Ufk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MFz-pV-wYW"/>
                     <constraint firstAttribute="trailing" secondItem="5HF-pZ-Ufk" secondAttribute="trailing" id="OLs-TV-EI8"/>
-                    <constraint firstItem="5HF-pZ-Ufk" firstAttribute="top" secondItem="hkx-FE-Oy5" secondAttribute="bottom" constant="12" id="TQv-iw-KLq"/>
                     <constraint firstAttribute="trailing" secondItem="hkx-FE-Oy5" secondAttribute="trailing" constant="4" id="TgA-BR-blL"/>
                     <constraint firstItem="KYl-Cv-EHd" firstAttribute="top" secondItem="5HF-pZ-Ufk" secondAttribute="bottom" id="WHh-hX-H97"/>
+                    <constraint firstItem="hkx-FE-Oy5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="bZD-0k-iHX"/>
+                    <constraint firstItem="5HF-pZ-Ufk" firstAttribute="top" secondItem="hkx-FE-Oy5" secondAttribute="bottom" constant="11" id="cmi-ha-PHl"/>
                     <constraint firstItem="KYl-Cv-EHd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eby-Bq-Djh"/>
-                    <constraint firstItem="5HF-pZ-Ufk" firstAttribute="top" secondItem="hkx-FE-Oy5" secondAttribute="bottom" constant="12" id="fr8-8B-BtV"/>
                     <constraint firstItem="5HF-pZ-Ufk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iAh-8L-svy"/>
                     <constraint firstItem="hkx-FE-Oy5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="ii9-Hv-D8k"/>
-                    <constraint firstItem="hkx-FE-Oy5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="t2G-IY-qg3"/>
-                    <constraint firstItem="5HF-pZ-Ufk" firstAttribute="top" secondItem="hkx-FE-Oy5" secondAttribute="bottom" constant="12" id="uMt-nz-KSb"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
